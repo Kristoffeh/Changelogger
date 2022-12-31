@@ -1,0 +1,45 @@
+﻿<Window x:Class="Changelogger.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Changelogger"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="500">
+    <Grid Margin="20">
+        <StackPanel Orientation="Vertical">
+            <Label Content="Changelog" />
+            <TextBox x:Name="txtChangelog" FontSize="15" Text="" 
+                     Padding="2" Foreground="#FF777777" AcceptsReturn="True"
+                     BorderThickness="2" BorderBrush="#FFE0E0E0" Background="White"/>
+
+            <Grid Margin="0 10 0 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Button x:Name="btnConvert" Grid.Column="1" Content="Convert" Padding="5" Click="btnConvert_Click" />
+            </Grid>
+
+            
+
+            <Label Content="Output"/>
+            <TextBox x:Name="txtOutput" FontSize="15" Text="" 
+                     Padding="2" Foreground="#FF777777" AcceptsReturn="False" TextWrapping="NoWrap"
+                     BorderThickness="2" BorderBrush="#FFE0E0E0" Background="White"/>
+
+
+            <Grid Margin="0 10 0 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Button x:Name="btnCopy" Grid.Column="1"  Content="Copy to clipboard" Padding="5" Click="btnCopy_Click" />
+            </Grid>
+            
+            
+        </StackPanel>
+    </Grid>
+</Window>
